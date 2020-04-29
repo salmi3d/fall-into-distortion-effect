@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+}
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+canvas {
+  display: block;
+}
+.progress {
+  position: relative;
+  width: 600px;
+  height: 50px;
+  background: #000;
+  border: 2px solid #000;
+  margin: 2px 0;
+}
+.progress::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: calc(1% * var(--progress, 0));
+  height: 100%;
+  background: red;
+  border: 0;
+  transition: width 200ms;
+}
